@@ -1,0 +1,136 @@
+.completed-container {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.completed-container h3 {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.completed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.completed-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+  opacity: 0.8;
+}
+
+.completed-card:hover {
+  opacity: 1;
+  transform: translateX(5px);
+  border-left: 3px solid var(--success);
+}
+
+.completed-content {
+  flex: 1;
+}
+
+.completed-content h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: var(--text-gray);
+}
+
+.completed-meta {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.completed-category {
+  background: var(--primary-dark);
+  padding: 2px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  color: rgb(239, 209, 231);
+}
+
+.completed-difficulty {
+  font-size: 0.75rem;
+  color: var(--warning);
+}
+
+.completed-xp {
+  font-size: 0.75rem;
+  color: var(--success);
+}
+
+.completed-date {
+  font-size: 0.7rem;
+  color: var(--text-gray);
+}
+
+.completed-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.restore-btn {
+  background: var(--warning);
+  color: var(--bg-dark);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.restore-btn:hover {
+  background: #ffb74d;
+  transform: scale(1.05);
+}
+
+.completed-actions .delete-btn {
+  background: var(--danger);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.completed-actions .delete-btn:hover {
+  background: #d32f2f;
+  transform: scale(1.05);
+}
+
+.completed-empty {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--bg-card);
+  border-radius: 15px;
+  color: var(--text-gray);
+}
+
+.completed-empty p:first-child {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .completed-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .completed-actions {
+    align-self: flex-end;
+  }
+}
